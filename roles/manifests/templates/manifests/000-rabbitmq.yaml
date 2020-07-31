@@ -1,0 +1,13 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: rabbitmq
+  namespace: kube-system
+spec:
+  chart: rabbitmq
+  repo: https://charts.bitnami.com/bitnami
+  targetNamespace: default
+  valuesContent: |-
+    auth:
+      password: "{{ rabbitmq_pass }}"
+    

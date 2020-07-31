@@ -1,0 +1,8 @@
+---
+- name: show template
+  template:
+    src: "manifests/000-rabbitmq.yaml"
+    dest: "/var/lib/rancher/k3s/server/manifests/000-rabbitmq.yaml"
+    owner: root
+    group: root
+    mode: 0755
